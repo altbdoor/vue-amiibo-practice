@@ -24,12 +24,12 @@ const router = new VueRouter({
             path: '/games',
             name: 'games',
             component: RouterPassThrough,
-            redirect: { name: 'games-list' },
+            redirect: { name: 'series-list' },
             children: [
                 {
-                    path: 'list',
-                    name: 'games-list',
-                    component: () => import('./views/GamesListView.vue'),
+                    path: 'series-list',
+                    name: 'series-list',
+                    component: () => import('./views/SeriesListView.vue'),
                 },
             ],
         },

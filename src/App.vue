@@ -3,7 +3,7 @@
 // https://vuejs.org/api/sfc-script-setup.html
 const links = [
     { name: 'home', text: 'Home' },
-    { name: 'games', text: 'Games' },
+    { name: 'series-list', text: 'Series list' },
 ];
 </script>
 

@@ -7,7 +7,7 @@ import SeriesList from '@/components/SeriesList.vue';
 let games: Game[] = [];
 const filteredGames = ref([] as Game[]);
 
-const filterGames = (filterText: string) => {
+const handleFilterGames = (filterText: string) => {
     if (filterText) {
         filteredGames.value = games.filter(({ name }) => name.toLowerCase().includes(filterText.toLowerCase()));
     } else {
@@ -19,7 +19,7 @@ getSeries()
     .then((res) => res.amiibo)
     .then((res) => {
         games = [...res];
-        filterGames('');
+        handleFilterGames('');
     });
 </script>
 
@@ -30,7 +30,7 @@ getSeries()
         <p>List of series for Amiibo</p>
 
         <div class="mb-3">
-            <SeriesSearch @form:filter="filterGames"></SeriesSearch>
+            <SeriesSearch @form:filter="handleFilterGames"></SeriesSearch>
         </div>
 
         <SeriesList :games="filteredGames"></SeriesList>
