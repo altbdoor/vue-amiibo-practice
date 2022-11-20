@@ -31,7 +31,7 @@ getSeries()
             Series list
         </h1>
         <p>List of series for Amiibo</p>
-        <div class="alert alert-info">Uses a basic form submit</div>
+        <div class="alert alert-info">Shows a basic form submit</div>
 
         <div class="mb-3">
             <SeriesSearch @form:filter="handleFilterGames"></SeriesSearch>

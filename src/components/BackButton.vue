@@ -10,7 +10,7 @@ import IconVue from './Icon.vue';
 </template>
 
 <style scoped>
-    a {
-        cursor: pointer;
-    }
+a {
+    cursor: pointer;
+}
 </style>

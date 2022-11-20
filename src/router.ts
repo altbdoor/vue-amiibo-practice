@@ -35,6 +35,11 @@ const router = new VueRouter({
                     name: 'series-list',
                     component: () => import('./views/SeriesListView.vue'),
                 },
+                {
+                    path: 'character-list',
+                    name: 'chara-list',
+                    component: () => import('./views/CharacterListView.vue'),
+                },
             ],
         },
     ],

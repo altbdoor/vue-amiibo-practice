@@ -1,10 +1,18 @@
 <script lang="ts">
-export default {};
+import IconVue from '@/components/Icon.vue';
+
+export default {
+    // https://v2.vuejs.org/v2/guide/components-registration.html#Local-Registration
+    components: { IconVue },
+};
 </script>
 
 <template>
     <div>
-        <h1>Welcome to Amiibo search</h1>
+        <h1>
+            <IconVue :icon="'house-door-fill'"></IconVue>
+            Welcome to Amiibo search
+        </h1>
 
         <p>
             <img src="https://cdn.jsdelivr.net/gh/N3evin/AmiiboAPI@master/images/icon_00000000-00000002.png" />

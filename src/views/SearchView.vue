@@ -1,4 +1,9 @@
-<script lang="ts" setup></script>
+<script lang="ts" setup>
+const searchLinks = [
+    { name: 'series-list', text: 'Search by series' },
+    { name: 'chara-list', text: 'List of characters' },
+];
+</script>
 
 <template>
     <div>
@@ -6,8 +11,8 @@
         <p>Select from the choices below on how to find Amiibo</p>
 
         <ol>
-            <li>
-                <router-link :to="{ name: 'series-list' }">Search by series</router-link>
+            <li v-for="link in searchLinks" :key="link.name">
+                <router-link :to="{ name: link.name }">{{ link.text }}</router-link>
             </li>
         </ol>
     </div>

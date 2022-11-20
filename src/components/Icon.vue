@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 import { ref, watchEffect } from 'vue';
 
-const props = defineProps<{ icon: string, size?: number }>();
+const props = defineProps<{ icon: string; size?: number }>();
 const svgElem = ref<SVGElement | null>(null);
 
 // https://vuejs.org/guide/essentials/watchers.html#watcheffect
@@ -20,7 +20,15 @@ watchEffect(async () => {
 </script>
 
 <template>
-    <svg ref="svgElem" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16"></svg>
+    <!-- https://icons.getbootstrap.com/ -->
+    <svg
+        ref="svgElem"
+        xmlns="http://www.w3.org/2000/svg"
+        width="16"
+        height="16"
+        fill="currentColor"
+        viewBox="0 0 16 16"
+    ></svg>
 </template>
 
 <style scoped>
