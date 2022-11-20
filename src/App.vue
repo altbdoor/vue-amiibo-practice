@@ -3,7 +3,7 @@
 // https://vuejs.org/api/sfc-script-setup.html
 const links = [
     { name: 'home', text: 'Home' },
-    { name: 'series-list', text: 'Series list' },
+    { name: 'search', text: 'Search' },
 ];
 </script>
 
@@ -24,7 +24,7 @@ export default {
 
 <template>
     <div class="container py-3">
-        <ul class="nav">
+        <ul class="nav nav-pills">
             <li class="nav-item" v-for="link in links" :key="link.name">
                 <router-link :to="{ name: link.name }" v-slot="{ href, isActive }" custom>
                     <a :href="href" :class="{ active: isActive }" class="nav-link">{{ link.text }}</a>

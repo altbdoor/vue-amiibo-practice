@@ -3,6 +3,7 @@ import { getSeries, type Game } from '@/services/api.service';
 import { ref } from 'vue';
 import SeriesSearch from '@/components/SeriesSearch.vue';
 import SeriesList from '@/components/SeriesList.vue';
+import BackButton from '@/components/BackButton.vue';
 
 let games: Game[] = [];
 const filteredGames = ref([] as Game[]);
@@ -25,9 +26,12 @@ getSeries()
 
 <template>
     <div>
-        <h1>Series list</h1>
-
+        <h1>
+            <BackButton></BackButton>
+            Series list
+        </h1>
         <p>List of series for Amiibo</p>
+        <div class="alert alert-info">Uses a basic form submit</div>
 
         <div class="mb-3">
             <SeriesSearch @form:filter="handleFilterGames"></SeriesSearch>

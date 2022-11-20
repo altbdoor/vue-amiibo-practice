@@ -9,8 +9,7 @@ const emit = defineEmits<{
     (e: 'form:filter', val: string): void;
 }>();
 
-const handleSubmit = (evt: Event) => {
-    evt.preventDefault();
+const handleSubmit = () => {
     emit('form:filter', filterText.value);
 };
 
@@ -26,7 +25,7 @@ onMounted(() => {
 </script>
 
 <template>
-    <form @submit="handleSubmit">
+    <form @submit.prevent="handleSubmit">
         <div class="mb-3">
             <label class="form-label">Filter series by name</label>
             <input type="text" class="form-control" v-model="filterText" ref="filterField" />

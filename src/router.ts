@@ -21,11 +21,15 @@ const router = new VueRouter({
             component: () => import('./views/HomeView.vue'),
         },
         {
-            path: '/games',
-            name: 'games',
+            path: '/search',
+            name: 'search',
             component: RouterPassThrough,
-            redirect: { name: 'series-list' },
+            // redirect: { name: 'series-list' },
             children: [
+                {
+                    path: '',
+                    component: () => import('./views/SearchView.vue'),
+                },
                 {
                     path: 'series-list',
                     name: 'series-list',
